@@ -1,5 +1,7 @@
 node_modules/
 .expo/
+/Backend/node_modules
+/Backend/.env
 npm-debug.*
 *.jks
 *.p8
@@ -12,5 +14,4 @@ web-build/
 # macOS
 .DS_Store
 
-/Backend/node_modules
-/Backend/.env
+
