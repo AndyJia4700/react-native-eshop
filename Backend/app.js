@@ -14,10 +14,14 @@ const productsRouter = require('./routers/products');
 const categoriesRouter = require('./routers/categories');
 const ordersRouter = require('./routers/orders');
 const usersRouter = require('./routers/users');
+const authJwt = require('./helper/jwt');
+const errorHandler = require('./helper/error-handler');
 
 //Middleware
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
+app.use(authJwt());
+app.use(errorHandler);
 
 //Routers
 app.use(`${api}/products`, productsRouter);
